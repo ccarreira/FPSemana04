@@ -7,7 +7,10 @@ import json
 #os.chdir(r"C:\Users\johnd\Documents\VIDEOGAMES\AULAS\FP1\Python_lab2025\tt")
 #filepath = "data.json"
 
-filepath = sys.argv[1]
+if len(sys.argv) > 1:
+    filepath = sys.argv[1]
+else:
+    filepath = input()
 
 def all_fields_in_data(data):
     return (("nome" in data) and ("idade" in data) and ("localização" in data))
